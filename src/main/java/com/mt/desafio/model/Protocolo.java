@@ -17,8 +17,8 @@ public class Protocolo {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Long id;	
 	
-	@NotBlank
-	@NotNull(message = "O preencimento do oficio é obrigatório!")
+//	@NotBlank
+//	@NotNull(message = "O preencimento do oficio é obrigatório!")
 	private String oficio;
 	
 	@NotBlank

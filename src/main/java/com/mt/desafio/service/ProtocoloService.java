@@ -1,8 +1,10 @@
 package com.mt.desafio.service;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+import java.util.UUID;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,6 +32,18 @@ public class ProtocoloService {
 	}
 
 	public Protocolo store(Protocolo protocolo) {
+		
+		/*Gerando codigo Aleatório*/
+		UUID uuid = UUID.randomUUID();		
+		String codigo = uuid.toString().substring(0,6);
+		
+		/*Extrair Ano Atual*/
+		Date ano = new Date();
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(ano);
+		Integer year = cal.get(Calendar.YEAR);	
+		
+		protocolo.setOficio(codigo+"/"+year.toString());
 		protocolo.setCreate_at(new Date());
 		
 		return repository.save(protocolo);
