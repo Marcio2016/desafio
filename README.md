@@ -28,7 +28,7 @@
 <h3>Tratando exceções</h3>
 <img src="/src/main/resources/assets/img/excetions.png">
 
-<h3>Documentação com Swagger via html</h3>
+<h3>Documentação com Swagger integrado ao spring boot com UI em html</h3>
 <img src="/src/main/resources/assets/img/swagger.png">
 
 <h3>Testando api com Swagger via html</h3>
