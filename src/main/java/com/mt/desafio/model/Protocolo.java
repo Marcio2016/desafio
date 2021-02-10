@@ -16,9 +16,7 @@ public class Protocolo {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)	
 	private Long id;	
-	
-//	@NotBlank
-//	@NotNull(message = "O preencimento do oficio é obrigatório!")
+
 	private String oficio;
 	
 	@NotBlank
@@ -27,7 +25,7 @@ public class Protocolo {
 	
 	@NotBlank
 	@NotNull(message = "O preencimento da descricao é obrigatório!")
-	@Size(min = 10, max = 50)
+	@Size(min = 6, max = 50)
 	private String descricao;
 	
 	@NotBlank

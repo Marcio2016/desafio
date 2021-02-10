@@ -2,7 +2,6 @@ package com.mt.desafio.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -29,7 +28,6 @@ public class ResourceServerConfig extends ResourceServerConfigurerAdapter {
 	            "/swagger-ui.html",
 	            "/webjars/**",
 	            "/v2/api-docs").permitAll()
-				.antMatchers(HttpMethod.GET,"/protocolo").permitAll()
 				.anyRequest().authenticated()
 				.and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
